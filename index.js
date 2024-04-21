@@ -1,10 +1,10 @@
-const screenshot = require("screenshot-desktop");
-const core = require("@actions/core");
-const artifact = require("@actions/artifact");
+import screenshot from "screenshot-desktop";
+import { getInput, setFailed } from "@actions/core";
+import { create } from "@actions/artifact";
 
-const fileName = core.getInput("file-name");
+const fileName = getInput("file-name");
 
-const artifactClient = artifact.create();
+const artifactClient = create();
 
 async function uploadScreenshot() {
 	await screenshot({ filename: fileName });
@@ -12,5 +12,5 @@ async function uploadScreenshot() {
 }
 
 uploadScreenshot().catch((error) => {
-	core.setFailed(error.message);
+	setFailed(error.message);
 });
