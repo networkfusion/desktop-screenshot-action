@@ -11,6 +11,6 @@
   "dependencies": {
     "@actions/artifact": "^2.1.5",
     "@actions/core": "^1.2.6",
-    "screenshot-desktop": "^1.14.1"
+    "screenshot-desktop": "^1.14.0"
   }
 }
