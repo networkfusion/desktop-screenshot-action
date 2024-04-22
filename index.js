@@ -1,4 +1,4 @@
-const screenshot = require('screenshot-desktop');
+const screenshot = require('./screenshot-desktop');
 const core = require("@actions/core");
 const artifact = require("@actions/artifact");
 
